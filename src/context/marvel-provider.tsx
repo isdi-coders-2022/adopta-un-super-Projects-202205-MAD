@@ -17,7 +17,7 @@ export function MarvelContextProvider({
             .then((obj) => {
                 setHomePageCharacters(obj.data.results);
             });
-    });
+    }, []);
 
     const context = {
         homePageCharacters,
