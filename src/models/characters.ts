@@ -5,7 +5,7 @@ export class CharacterModel {
         extension: string;
     };
 
-    constructor(name: string, path: string = '', extension: string = '') {
+    constructor(name: string, path: string = '', extension: string = '', public id: string) {
         this.name = name;
         this.thumbnail = {
             path,
