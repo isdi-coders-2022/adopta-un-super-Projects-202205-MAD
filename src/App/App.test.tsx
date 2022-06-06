@@ -2,6 +2,7 @@
 import { render, screen } from '@testing-library/react';
 import AppUI from './AppUI';
 
+
 describe("Given my AppUI", () => {
 
     // const mockTitle = {
@@ -16,6 +17,7 @@ describe("Given my AppUI", () => {
             expect(linkElement).toBeInTheDocument();
         })
     });
+
 });
 
 
