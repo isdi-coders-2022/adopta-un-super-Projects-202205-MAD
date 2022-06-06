@@ -2,11 +2,30 @@ import { render, screen } from '@testing-library/react';
 import React, { useContext } from 'react';
 import { MarvelContext } from './marvel-context';
 import { MarvelContextProvider } from './marvel-provider';
+import { MarvelApi } from "../services/marvelApi";
 
 
+jest.mock("../services/marvelApi")
 
 
- const TestingComponent = () => {
+const mockResponseData = [{
+    name: 'test',
+    thumbnail: {
+        path: '',
+        extension: 'string',
+    },
+}]
+ 
+    
+    describe('<MarvelContextProvider />', () => {
+
+        beforeEach(() => {
+            (  MarvelApi.getCharacters as unknown as jest.Mock ).mockResolvedValue({data: { results: mockResponseData}});
+        })
+
+       
+
+const TestingComponent = () => {
      const { homePageCharacters } = useContext(MarvelContext);
       console.log(homePageCharacters);
       return (
@@ -16,9 +35,8 @@ import { MarvelContextProvider } from './marvel-provider';
         </>
       );
     };
-    
-    describe('<MarvelContextProvider />', () => {
-      test('provides expected MarvelContext to child elements', () => {
+
+      test('provides expected MarvelContext to child elements', async  () => {
 
 
 
@@ -30,7 +48,7 @@ import { MarvelContextProvider } from './marvel-provider';
     
         screen.debug()
 
-    expect(screen.getByText('0')).toBeInTheDocument();
+    expect(await screen.getByText('0')).toBeInTheDocument();
     });
         
         // expected name
