@@ -1,21 +1,16 @@
-import { CharacterModel } from "../../models/characters";
+import { CharacterModel } from '../../models/characters';
 
-
-export function Card( {superHero}: {superHero : CharacterModel}) {
-
-
+export function Card({ superHero }: { superHero: CharacterModel }) {
     // eslint-disable-next-line prefer-const
     let template = (
-
-        <li key={superHero.name}>
-            <h2>
-            {superHero.name}
-            <img src={`${superHero.thumbnail.path}/landscape_xlarge.${superHero.thumbnail.extension}`} alt={`Super: ${superHero.name}`} />
-            <i className="emoji">
-                <img src="../../static/unfavorite.png"></img>
-                </i>
-            </h2>
-      </li>
+        <>
+            <img
+                src={`${superHero.thumbnail.path}/landscape_xlarge.${superHero.thumbnail.extension}`}
+                alt={`Super: ${superHero.name}`}
+            />
+            <h2>{superHero.name}</h2>
+            <img src="../../static/840_560.jpg"></img>
+        </>
     );
 
     return template;
