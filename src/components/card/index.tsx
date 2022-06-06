@@ -10,7 +10,7 @@ export function Card({ superHero }: { superHero: CharacterModel }) {
             />
             <h2>{superHero.name}</h2>
             <p>{superHero.id}</p>
-            <img src="../../static/840_560.jpg"></img>
+            <img src="./static/unfavorite.png"></img>
         </>
     );
 
