@@ -10,7 +10,7 @@ export function Card( {superHero}: {superHero : CharacterModel}) {
         <li key={superHero.name}>
             <h2>
             {superHero.name}
-            <img src={`${superHero.thumbnail.path}/landscape_xlarge.${superHero.thumbnail.extension}`} alt="" />
+            <img src={`${superHero.thumbnail.path}/landscape_xlarge.${superHero.thumbnail.extension}`} alt={`Super: ${superHero.name}`} />
             <i className="emoji">
                 <img src="../../static/unfavorite.png"></img>
                 </i>
