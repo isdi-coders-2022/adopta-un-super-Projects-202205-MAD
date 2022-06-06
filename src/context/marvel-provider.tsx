@@ -13,10 +13,10 @@ export function MarvelContextProvider({
 
     useEffect(() => {
         MarvelApi.getCharacters()
-            .then((resp) => resp)
-            .then((obj) => {
-                setHomePageCharacters(obj.data.results);
-            });
+        .then((resp) => {
+            setHomePageCharacters(resp.data.results);
+        })
+        ;
     }, []);
 
     const context = {
