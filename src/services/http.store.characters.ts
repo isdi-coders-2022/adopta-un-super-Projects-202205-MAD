@@ -6,7 +6,7 @@ export class HttpStoreCharacters {
         this.url = 'http://localhost:4000/characters';
     }
 
-    getCharacters(): Promise<Array<CharacterModel>> {
+    async getCharacters(): Promise<Array<CharacterModel>> {
         // GET
         return fetch(this.url).then((resp) => {
             return resp.json();
