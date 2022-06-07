@@ -5,14 +5,7 @@ const hash = '&ts=1000&apikey=51f17293928d718a3be05579990c29ed&hash=e5fe67d957b5
 
 
 export class MarvelApi {
-    // static async getCharacters(): Promise<{data: {results: CharacterModel[]}}> {
-    //     const result = await fetch(
-    //         `${url}?${hash}`
-    //     );
-    //     return await result.json();
-    // }
-
-    static async getCharacters(offset: string = '20'): Promise<{data: {results: CharacterModel[]}}> {
+    static async getCharacters(offset: string = '0'): Promise<{data: {results: CharacterModel[]}}> {
         const result = await fetch(
             `${url}?limit=20&offset=${offset}${hash}`
         );
