@@ -5,12 +5,12 @@ export function Card({ superHero }: { superHero: CharacterModel }) {
     let template = (
         <>
             <img
+                className="card-image"
                 src={`${superHero.thumbnail.path}/landscape_xlarge.${superHero.thumbnail.extension}`}
                 alt={`Super: ${superHero.name}`}
             />
-            <h2>{superHero.name}</h2>
-            <p>{superHero.id}</p>
-            <img src="./static/unfavorite.png"></img>
+            <h2 className="card-name">{superHero.name}</h2>
+            <img className="fav-icon" src="./static/unfavorite.png"></img>
         </>
     );
 

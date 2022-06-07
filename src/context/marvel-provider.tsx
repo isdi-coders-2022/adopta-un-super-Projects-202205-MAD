@@ -4,6 +4,8 @@ import { homePageCharactersReducer } from '../reducers/reducer';
 import * as actions from '../reducers/action.creators';
 import { MarvelApi } from '../services/marvelApi';
 import { MarvelContext } from './marvel-context';
+import { HttpStoreCharacters } from '../services/http.store.characters';
+import { favoritesCharactersReducer } from '../reducers/reducer-store';
 
 export function MarvelContextProvider({
     children,
@@ -13,6 +15,7 @@ export function MarvelContextProvider({
     const initialState: CharacterModel[] = [];
     const initPagination: number = 0;
     const initCharacters: number = 0;
+    const initFavorites: CharacterModel[] = [];
 
     const [homePageCharacters, dispatch] = useReducer(
         homePageCharactersReducer,
@@ -24,16 +27,28 @@ export function MarvelContextProvider({
     const [totalCharactersApi, setTotalCharactersApi] =
         useState(initCharacters);
 
+    const store = new HttpStoreCharacters();
+    const [favoriteCharacters, dispatchFavorites] = useReducer(
+        favoritesCharactersReducer,
+        initFavorites
+    );
+
     useEffect(() => {
         MarvelApi.getCharacters(pagination.toString()).then((resp) => {
             dispatch(actions.loadCharactersAction(resp.data.results));
-            totalCharactersApiUpdate(resp.data.total);
+            // totalCharactersApiUpdate(resp.data.total);
         });
     }, [pagination]);
 
     useEffect(() => {
         MarvelApi.getCharacters(pagination.toString()).then((resp) => {
             totalCharactersApiUpdate(resp.data.total);
+        });
+    }, []);
+
+    useEffect(() => {
+        store.getCharacters().then((resp) => {
+            dispatchFavorites(actions.loadCharactersAction(resp));
         });
     }, []);
 
@@ -50,6 +65,7 @@ export function MarvelContextProvider({
         pagination,
         pages,
         totalCharactersApi,
+        favoriteCharacters,
     };
 
     return (
