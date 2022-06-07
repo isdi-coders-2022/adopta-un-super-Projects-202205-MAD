@@ -33,6 +33,8 @@ export function MarvelContextProvider({
         initFavorites
     );
 
+    
+
     useEffect(() => {
         MarvelApi.getCharacters(pagination.toString()).then((resp) => {
             dispatch(actions.loadCharactersAction(resp.data.results));
@@ -60,12 +62,21 @@ export function MarvelContextProvider({
         setTotalCharactersApi(total);
     }
 
+    function addFavorite(character: CharacterModel){
+        store.setCharacter(character).then((resp) => {
+            dispatchFavorites(actions.addCharacterAction(resp));
+        });
+
+        // dispatchFavorites(actions.addCharacterAction(character));
+    }
+
     const context = {
         homePageCharacters,
         pagination,
         pages,
         totalCharactersApi,
         favoriteCharacters,
+        addFavorite
     };
 
     return (
