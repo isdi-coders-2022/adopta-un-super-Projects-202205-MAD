@@ -1,7 +1,7 @@
 import { ReactElement, useEffect, useReducer, useState } from 'react';
 import { CharacterModel } from '../models/characters';
 import { homePageCharactersReducer } from '../reducers/reducer';
-import * as actions from '../reducers/action.creators'
+import * as actions from '../reducers/action.creators';
 import { MarvelApi } from '../services/marvelApi';
 import { MarvelContext } from './marvel-context';
 
@@ -12,31 +12,44 @@ export function MarvelContextProvider({
 }) {
     const initialState: CharacterModel[] = [];
     const initPagination: number = 0;
+    const initCharacters: number = 0;
 
-    const [homePageCharacters, dispatch] = useReducer(homePageCharactersReducer, initialState);
+    const [homePageCharacters, dispatch] = useReducer(
+        homePageCharactersReducer,
+        initialState
+    );
 
     const [pagination, setPagination] = useState(initPagination);
 
+    const [totalCharactersApi, setTotalCharactersApi] =
+        useState(initCharacters);
+
     useEffect(() => {
-        MarvelApi.getCharacters(pagination.toString())
-        .then((resp) => {
-            console.log('pagination: ' + pagination);
+        MarvelApi.getCharacters(pagination.toString()).then((resp) => {
             dispatch(actions.loadCharactersAction(resp.data.results));
-            console.log('recibido');
-        })
-        ;
+            totalCharactersApiUpdate(resp.data.total);
+        });
     }, [pagination]);
 
-    function pages(offset: number){
-        setPagination(offset);
+    useEffect(() => {
+        MarvelApi.getCharacters(pagination.toString()).then((resp) => {
+            totalCharactersApiUpdate(resp.data.total);
+        });
+    }, []);
 
-        console.log('click');
+    function pages(offset: number) {
+        setPagination(offset);
+    }
+
+    function totalCharactersApiUpdate(total: number) {
+        setTotalCharactersApi(total);
     }
 
     const context = {
         homePageCharacters,
         pagination,
-        pages
+        pages,
+        totalCharactersApi,
     };
 
     return (

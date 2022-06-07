@@ -9,7 +9,6 @@ export class HttpStoreCharacters {
     getCharacters(): Promise<Array<CharacterModel>> {
         // GET
         return fetch(this.url).then((resp) => {
-            console.log(resp.status);
             return resp.json();
         });
     }
@@ -31,7 +30,9 @@ export class HttpStoreCharacters {
         }).then((response) => response.json());
     }
 
-    updateCharacter(character: CharacterModel): Promise<Partial<CharacterModel>> {
+    updateCharacter(
+        character: CharacterModel
+    ): Promise<Partial<CharacterModel>> {
         // PUT / PATCH
         return fetch(this.url + `/${character.id}`, {
             method: 'PATCH',

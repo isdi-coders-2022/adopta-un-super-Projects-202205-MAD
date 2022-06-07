@@ -5,6 +5,7 @@ import { Card } from '../card';
 
 export function CardList() {
     const { homePageCharacters } = useContext(MarvelContext);
+
     let template = (
         <ul>
             {homePageCharacters.map((item) => (
