@@ -9,7 +9,7 @@ export class CharacterModel {
         name: string,
         path: string = '',
         extension: string = '',
-        public id: string
+        public id: number
     ) {
         this.name = name;
         this.thumbnail = {
