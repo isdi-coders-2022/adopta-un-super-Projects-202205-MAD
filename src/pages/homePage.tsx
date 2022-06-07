@@ -5,9 +5,11 @@ import { MarvelContext } from "../context/marvel-context";
 
 export function HomePage() {
     const {pagination, pages} = useContext(MarvelContext);
-    console.log(pagination);
+    // console.log(pagination);
     return (
-        <CardList></CardList>
-        <button onClick={}>Next</button>
+        <>
+            <CardList></CardList>
+            <button onClick={() => {pages(pagination + 20)}}>Next</button>
+        </>
     )
 }

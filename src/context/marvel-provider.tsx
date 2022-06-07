@@ -18,15 +18,19 @@ export function MarvelContextProvider({
     const [pagination, setPagination] = useState(initPagination);
 
     useEffect(() => {
-        MarvelApi.getCharacters()
+        MarvelApi.getCharacters(pagination.toString())
         .then((resp) => {
+            console.log('pagination: ' + pagination);
             dispatch(actions.loadCharactersAction(resp.data.results));
+            console.log('recibido');
         })
         ;
-    }, []);
+    }, [pagination]);
 
-    function pages(){
-        setPagination(20)
+    function pages(offset: number){
+        setPagination(offset);
+
+        console.log('click');
     }
 
     const context = {
