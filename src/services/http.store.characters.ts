@@ -3,7 +3,7 @@ import { CharacterModel } from '../models/characters';
 export class HttpStoreCharacters {
     url: string;
     constructor() {
-        this.url = 'http://localhost:4000/characters';
+        this.url = 'http://localhost:4000/favorites';
     }
 
     async getCharacters(): Promise<Array<CharacterModel>> {

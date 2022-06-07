@@ -3,11 +3,12 @@ import { CardList } from '../components/cardList';
 import { MarvelContext } from '../context/marvel-context';
 
 export function HomePage() {
-    const { pagination, pages, totalCharactersApi } = useContext(MarvelContext);
+    const { pagination, pages, totalCharactersApi, homePageCharacters } =
+        useContext(MarvelContext);
 
     return (
         <>
-            <CardList></CardList>
+            <CardList characters={homePageCharacters}></CardList>
 
             {pagination === 0 ? (
                 ''

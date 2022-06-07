@@ -1,14 +1,15 @@
 /* eslint-disable prefer-const */
-import { useContext } from 'react';
-import { MarvelContext } from '../../context/marvel-context';
+import { CharacterModel } from '../../models/characters';
 import { Card } from '../card';
 
-export function CardList() {
-    const { homePageCharacters } = useContext(MarvelContext);
-
+export function CardList({
+    characters,
+}: {
+    characters: Array<CharacterModel>;
+}) {
     let template = (
         <ul className="card-list">
-            {homePageCharacters.map((item) => (
+            {characters.map((item) => (
                 <li key={item.name} className="card-list__card">
                     <Card superHero={item}></Card>
                 </li>
