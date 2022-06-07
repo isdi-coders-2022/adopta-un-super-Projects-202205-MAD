@@ -6,12 +6,11 @@ export class HttpStoreCharacters {
         this.url = 'http://localhost:4000/characters';
     }
 
-    getCharacters(): Promise<Array<CharacterModel>> {
+    async getCharacters(): Promise<Array<CharacterModel>> {
         // GET
-        return fetch(this.url).then((resp) => {
-            console.log(resp.status);
-            return resp.json();
-        });
+        const resp = await fetch(this.url);
+        console.log(resp.status);
+        return await resp.json();
     }
 
     async getCharacter(character: CharacterModel): Promise<CharacterModel> {
