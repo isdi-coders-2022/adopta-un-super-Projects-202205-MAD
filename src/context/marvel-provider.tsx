@@ -1,4 +1,4 @@
-import { ReactElement, useEffect, useReducer } from 'react';
+import { ReactElement, useEffect, useReducer, useState } from 'react';
 import { CharacterModel } from '../models/characters';
 import { homePageCharactersReducer } from '../reducers/reducer';
 import * as actions from '../reducers/action.creators'
@@ -11,24 +11,28 @@ export function MarvelContextProvider({
     children: ReactElement;
 }) {
     const initialState: CharacterModel[] = [];
-
-
-
-    // const [homePageCharacters, setHomePageCharacters] = useState(initialState);
+    const initPagination: number = 0;
 
     const [homePageCharacters, dispatch] = useReducer(homePageCharactersReducer, initialState);
+
+    const [pagination, setPagination] = useState(initPagination);
 
     useEffect(() => {
         MarvelApi.getCharacters()
         .then((resp) => {
-            // dispatch(actions.loadCharactersAction(resp.data.results)); 
             dispatch(actions.loadCharactersAction(resp.data.results));
         })
         ;
     }, []);
 
+    function pages(){
+        setPagination(20)
+    }
+
     const context = {
         homePageCharacters,
+        pagination,
+        pages
     };
 
     return (
