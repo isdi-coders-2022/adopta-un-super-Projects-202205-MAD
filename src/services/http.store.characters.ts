@@ -8,9 +8,9 @@ export class HttpStoreCharacters {
 
     async getCharacters(): Promise<Array<CharacterModel>> {
         // GET
-        const resp = await fetch(this.url);
-        console.log(resp.status);
-        return await resp.json();
+        return fetch(this.url).then((resp) => {
+            return resp.json();
+        });
     }
 
     async getCharacter(character: CharacterModel): Promise<CharacterModel> {
@@ -30,7 +30,9 @@ export class HttpStoreCharacters {
         }).then((response) => response.json());
     }
 
-    updateCharacter(character: CharacterModel): Promise<Partial<CharacterModel>> {
+    updateCharacter(
+        character: CharacterModel
+    ): Promise<Partial<CharacterModel>> {
         // PUT / PATCH
         return fetch(this.url + `/${character.id}`, {
             method: 'PATCH',
