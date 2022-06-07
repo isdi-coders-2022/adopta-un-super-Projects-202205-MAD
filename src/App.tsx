@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { MarvelContextProvider } from './context/marvel-provider';
 import {
     BrowserRouter as Router,
@@ -10,9 +10,14 @@ import { HomePage } from './pages/homePage';
 import { FavPage } from './pages/favPage';
 import { aMenuItems } from './interfaces/menu.items';
 import Layout from './App/layout';
+import { MarvelContext } from './context/marvel-context';
 // import AppUI from "./AppUI"
 
 function App() {
+
+    const {pagination} = useContext(MarvelContext);
+    console.log(pagination);
+
     const options: aMenuItems = [
         { path: '', label: 'Home - AUS', page: <HomePage /> },
         { path: 'favorites', label: 'Favorites', page: <FavPage /> },
