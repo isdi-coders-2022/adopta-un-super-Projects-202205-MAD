@@ -4,10 +4,10 @@ import { MarvelContext } from "../context/marvel-context";
 
 
 export function HomePage() {
-    const {pagination} = useContext(MarvelContext);
+    const {pagination, pages} = useContext(MarvelContext);
     console.log(pagination);
     return (
         <CardList></CardList>
-        
+        <button onClick={}>Next</button>
     )
 }
