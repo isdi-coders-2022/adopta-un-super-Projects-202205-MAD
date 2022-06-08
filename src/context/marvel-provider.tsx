@@ -13,6 +13,8 @@ export function MarvelContextProvider({
 }: {
     children: ReactElement;
 }) {
+    const { isAuthenticated, user } = useAuth0();
+
     const initialState: CharacterModel[] = [];
     const initPagination: number = 0;
     const initCharacters: number = 0;
