@@ -7,33 +7,21 @@ import '../styles/App.css';
 import LoginButton from '../components/login/login';
 
 function Layout({
-    
     options,
     children,
 }: {
     options: aMenuItems;
     children: ReactElement;
 }) {
-    const {
-        isAuthenticated,
-        user
-        
-      } = useAuth0();
-      
-      console.log(isAuthenticated)
-      console.log(user)
+    const { isAuthenticated, user } = useAuth0();
+
     return (
         <>
             <h1>Marvel</h1>
             <main>{children}</main>
             <Navigation options={options}></Navigation>
 
-            {
-                isAuthenticated ? <LogoutButton></LogoutButton> : ""
-            }
-                
-                
-            
+            {isAuthenticated ? <LogoutButton></LogoutButton> : ''}
         </>
     );
 }

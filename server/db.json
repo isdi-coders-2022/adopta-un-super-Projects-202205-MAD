@@ -1,52 +1,60 @@
 {
-    "users": [
+  "users": [
+    {
+      "nickname": "pablodacun",
+      "given_name": "Pablo",
+      "favorites": [
         {
-            "nickname": "pablodacun",
-            "given_name": "Pablo",
-            "favorites": [
-                {
-                    "id": 1011176,
-                    "name": "Ajak",
-                    "description": "",
-                    "thumbnail": {
-                      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
-                      "extension": "jpg"
-                    }
-                  },
-                  {
-                    "id": 1010870,
-                    "name": "Ajaxis",
-                    "description": "",
-                    "thumbnail": {
-                      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/70/4c0035adc7d3a",
-                      "extension": "jpg"
-                    }
-                  }
-            ]
+          "id": 1011176,
+          "name": "Ajak",
+          "description": "",
+          "thumbnail": {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+            "extension": "jpg"
+          }
         },
         {
-            "nickname": "tigre",
-            "given_name": "Irene",
-            "favorites": [
-                {
-                    "id": 1011176,
-                    "name": "Ajak",
-                    "description": "",
-                    "thumbnail": {
-                      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
-                      "extension": "jpg"
-                    }
-                  },
-                  {
-                    "id": 1010870,
-                    "name": "Ajaxis",
-                    "description": "",
-                    "thumbnail": {
-                      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/70/4c0035adc7d3a",
-                      "extension": "jpg"
-                    }
-                  }
-            ]
+          "id": 1010870,
+          "name": "Ajaxis",
+          "description": "",
+          "thumbnail": {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/70/4c0035adc7d3a",
+            "extension": "jpg"
+          }
         }
-    ]
+      ]
+    },
+    {
+      "nickname": "iavivas3",
+      "given_name": "Irene",
+      "favorites": [
+        {
+          "id": 1011176,
+          "name": "Ajak",
+          "description": "",
+          "thumbnail": {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+            "extension": "jpg"
+          }
+        },
+        {
+          "id": 1010870,
+          "name": "Ajaxis",
+          "description": "",
+          "thumbnail": {
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/70/4c0035adc7d3a",
+            "extension": "jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2342,
+      "name": "CACA",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+        "extension": "jpg"
+      }
+    }
+  ]
 }

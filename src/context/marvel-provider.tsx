@@ -13,13 +13,7 @@ export function MarvelContextProvider({
 }: {
     children: ReactElement;
 }) {
-
-    const {
-        isAuthenticated,
-        user
-        
-      } = useAuth0();
-      
+    const { isAuthenticated, user } = useAuth0();
 
     const initialState: CharacterModel[] = [];
     const initPagination: number = 0;
@@ -30,8 +24,6 @@ export function MarvelContextProvider({
         homePageCharactersReducer,
         initialState
     );
-
-    
 
     const [pagination, setPagination] = useState(initPagination);
 
@@ -59,11 +51,13 @@ export function MarvelContextProvider({
         });
     }, []);
 
-    useEffect(() => {
-        store.getCharacters(user?.nickname as string).then((resp) => {
-            dispatchFavorites(actions.loadCharactersAction(resp));
+    function getFavorites(nickname: string) {
+        store.getCharacters(nickname).then((resp) => {
+            console.log('hola', resp);
+
+            dispatchFavorites(actions.loadCharactersAction(resp[0].favorites));
         });
-    }, []);
+    }
 
     function pages(offset: number) {
         setPagination(offset);
@@ -86,7 +80,7 @@ export function MarvelContextProvider({
         totalCharactersApi,
         favoriteCharacters,
         addFavorite,
-
+        getFavorites,
     };
 
     return (

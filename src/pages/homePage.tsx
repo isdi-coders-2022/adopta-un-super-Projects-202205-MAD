@@ -1,15 +1,19 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { CardList } from '../components/cardList';
-import LoginButton from '../components/login/login';
 import { MarvelContext } from '../context/marvel-context';
 
 export function HomePage() {
-    const { pagination, pages, totalCharactersApi, homePageCharacters } =
-        useContext(MarvelContext);
+    const {
+        pagination,
+        pages,
+        totalCharactersApi,
+        homePageCharacters,
+        getFavorites,
+    } = useContext(MarvelContext);
 
     return (
         <>
-         <CardList characters={homePageCharacters}></CardList>
+            <CardList characters={homePageCharacters}></CardList>
 
             {pagination === 0 ? (
                 ''
