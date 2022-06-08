@@ -14,7 +14,9 @@ const initialContext: {
     totalCharactersApi: 0,
     pages: () => {},
     favoriteCharacters: [],
-    addFavorite: () => {}
+    addFavorite: () => {},
 };
 
 export const MarvelContext = createContext(initialContext);
+
+

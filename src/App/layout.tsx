@@ -19,6 +19,7 @@ function Layout({
         user
         
       } = useAuth0();
+      
       console.log(isAuthenticated)
       console.log(user)
     return (
