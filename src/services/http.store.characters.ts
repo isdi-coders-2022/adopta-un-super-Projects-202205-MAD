@@ -1,14 +1,19 @@
+// import { useAuth0 } from '@auth0/auth0-react';
 import { CharacterModel } from '../models/characters';
 
+
+
 export class HttpStoreCharacters {
+
     url: string;
     constructor() {
-        this.url = 'http://localhost:4000/favorites';
+        this.url = 'http://localhost:4000/users';
     }
 
-    async getCharacters(): Promise<Array<CharacterModel>> {
+    async getCharacters(nickname: string): Promise<Array<CharacterModel>> {
         // GET
-        return fetch(this.url).then((resp) => {
+        return fetch('http://localhost:4000/users?nickname=' + nickname).then((resp) => {
+            console.log('llega response');
             return resp.json();
         });
     }

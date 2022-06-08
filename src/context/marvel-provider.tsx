@@ -6,12 +6,21 @@ import { MarvelApi } from '../services/marvelApi';
 import { MarvelContext } from './marvel-context';
 import { HttpStoreCharacters } from '../services/http.store.characters';
 import { favoritesCharactersReducer } from '../reducers/reducer-store';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export function MarvelContextProvider({
     children,
 }: {
     children: ReactElement;
 }) {
+
+    const {
+        isAuthenticated,
+        user
+        
+      } = useAuth0();
+      
+
     const initialState: CharacterModel[] = [];
     const initPagination: number = 0;
     const initCharacters: number = 0;
@@ -21,6 +30,8 @@ export function MarvelContextProvider({
         homePageCharactersReducer,
         initialState
     );
+
+    
 
     const [pagination, setPagination] = useState(initPagination);
 
@@ -49,7 +60,7 @@ export function MarvelContextProvider({
     }, []);
 
     useEffect(() => {
-        store.getCharacters().then((resp) => {
+        store.getCharacters(user?.nickname as string).then((resp) => {
             dispatchFavorites(actions.loadCharactersAction(resp));
         });
     }, []);
@@ -75,6 +86,7 @@ export function MarvelContextProvider({
         totalCharactersApi,
         favoriteCharacters,
         addFavorite,
+
     };
 
     return (
