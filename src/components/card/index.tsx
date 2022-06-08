@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { MarvelContext } from '../../context/marvel-context';
 import { CharacterModel } from '../../models/characters';
 
@@ -12,16 +13,19 @@ export function Card({ superHero }: { superHero: CharacterModel }) {
       extension: "jpg"} 
     }
 
-    const { addFavorite } =
+    const { addFavorite, addDetails } =
     useContext(MarvelContext);
     // eslint-disable-next-line prefer-const
     let template = (
         <>
-            <img
-                className="card-image"
-                src={`${superHero.thumbnail.path}/landscape_xlarge.${superHero.thumbnail.extension}`}
-                alt={`Super: ${superHero.name}`}
-            />
+            <Link to='details'>
+                <img
+                    className="card-image"
+                    src={`${superHero.thumbnail.path}/landscape_xlarge.${superHero.thumbnail.extension}`}
+                    alt={`Super: ${superHero.name}`}
+                    onClick={() => {addDetails(superHero)}}
+                />
+            </Link>
             <h2 className="card-name">{superHero.name}</h2>
             <img onClick={() => {addFavorite(hero)}} className="fav-icon" src="./static/unfavorite.png"></img>
         </>

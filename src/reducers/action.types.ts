@@ -5,6 +5,7 @@
 //     'tasks@load' = 'tasks@load',
 // }
 
+
 export enum actionTypes {
     'characters@add' = 0,
     'characters@delete' = 1,
