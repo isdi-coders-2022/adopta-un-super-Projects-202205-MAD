@@ -1,27 +1,13 @@
 // import { CharacterModel } from "../models/characters";
 
-import { useContext, useEffect } from "react";
-import { MarvelContext } from "../context/marvel-context";
+import { useParams } from "react-router-dom";
 
 export function DetailsPage(){
+
+    const {id} = useParams();
+    console.log( id);
        
-    const { details } =  useContext(MarvelContext);
-
-    // useEffect(() => {
-        
-    // console.log(details);
-
-    // }, [details]);
-
-
-
     return (
-        <>
-            <h1>{details.name}</h1>
-
-            <img src={`${details.thumbnail.path}/landscape_xlarge.${details.thumbnail.extension}`} alt="{details.name}" />
-
-
-        </>
+        <h1>{id}</h1>
     )
 }
