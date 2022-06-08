@@ -7,8 +7,10 @@ export class HttpStoreCharacters {
         this.url = 'http://localhost:4000/users?nickname=';
     }
 
-    async getCharacters(nickname: string): Promise<Array<CharacterModel>> {
+    getCharacters(nickname: string): Promise<any> {
         // GET
+        console.log(this.url + nickname);
+
         return fetch(this.url + nickname).then((resp) => {
             return resp.json();
         });

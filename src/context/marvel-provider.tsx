@@ -53,7 +53,9 @@ export function MarvelContextProvider({
 
     function getFavorites(nickname: string) {
         store.getCharacters(nickname).then((resp) => {
-            dispatchFavorites(actions.loadCharactersAction(resp));
+            console.log('hola', resp);
+
+            dispatchFavorites(actions.loadCharactersAction(resp[0].favorites));
         });
     }
 

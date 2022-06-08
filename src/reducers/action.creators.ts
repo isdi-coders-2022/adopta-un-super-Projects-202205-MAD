@@ -6,7 +6,7 @@ export interface iAction {
     payload?: any;
 }
 
-export const loadCharactersAction = (characters: Array<CharacterModel>): iAction => ({
+export const loadCharactersAction = (characters: any): iAction => ({
     type: actionTypes['characters@load'],
     payload: characters,
 });
