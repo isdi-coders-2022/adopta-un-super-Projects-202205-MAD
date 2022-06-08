@@ -8,13 +8,15 @@ const initialContext: {
     pages: (offset: number) => void;
     favoriteCharacters: CharacterModel[];
     addFavorite: (character: CharacterModel) => void;
+    getFavorites: (nickname: string) => any;
 } = {
     homePageCharacters: [],
     pagination: 0,
     totalCharactersApi: 0,
     pages: () => {},
     favoriteCharacters: [],
-    addFavorite: () => {}
+    addFavorite: () => {},
+    getFavorites: () => {},
 };
 
 export const MarvelContext = createContext(initialContext);

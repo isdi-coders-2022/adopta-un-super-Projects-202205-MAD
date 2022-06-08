@@ -3,12 +3,12 @@ import { CharacterModel } from '../models/characters';
 export class HttpStoreCharacters {
     url: string;
     constructor() {
-        this.url = 'http://localhost:4000/favorites';
+        this.url = 'http://localhost:4000/users?nickname=';
     }
 
-    async getCharacters(): Promise<Array<CharacterModel>> {
+    async getCharacters(nickname: string): Promise<Array<CharacterModel>> {
         // GET
-        return fetch(this.url).then((resp) => {
+        return fetch(this.url + nickname).then((resp) => {
             return resp.json();
         });
     }

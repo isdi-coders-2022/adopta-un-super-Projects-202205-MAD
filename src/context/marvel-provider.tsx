@@ -6,6 +6,7 @@ import { MarvelApi } from '../services/marvelApi';
 import { MarvelContext } from './marvel-context';
 import { HttpStoreCharacters } from '../services/http.store.characters';
 import { favoritesCharactersReducer } from '../reducers/reducer-store';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export function MarvelContextProvider({
     children,
@@ -48,11 +49,11 @@ export function MarvelContextProvider({
         });
     }, []);
 
-    useEffect(() => {
-        store.getCharacters().then((resp) => {
+    function getFavorites(nickname: string) {
+        store.getCharacters(nickname).then((resp) => {
             dispatchFavorites(actions.loadCharactersAction(resp));
         });
-    }, []);
+    }
 
     function pages(offset: number) {
         setPagination(offset);
@@ -75,6 +76,7 @@ export function MarvelContextProvider({
         totalCharactersApi,
         favoriteCharacters,
         addFavorite,
+        getFavorites,
     };
 
     return (
