@@ -26,6 +26,9 @@ export function MarvelContextProvider({
 
     const [pagination, setPagination] = useState(initPagination);
 
+    // for the deatils page  
+    const [details, setDetails] = useState(initDetails); 
+
     const [totalCharactersApi, setTotalCharactersApi] =
         useState(initCharacters);
 
@@ -72,7 +75,9 @@ export function MarvelContextProvider({
             dispatchFavorites(actions.addCharacterAction(resp));
         });
 
-        // dispatchFavorites(actions.addCharacterAction(character));
+
+    function addDetails(character: CharacterModel){
+        setDetails(character)
     }
 
     function addDetails(character: CharacterModel){
@@ -95,4 +100,5 @@ export function MarvelContextProvider({
             {children}
         </MarvelContext.Provider>
     );
+}
 }

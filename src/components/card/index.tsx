@@ -19,12 +19,14 @@ export function Card({ superHero }: { superHero: CharacterModel }) {
     let template = (
         <>
             <Link to='details'>
+
             <img
                 className="card-image"
                 src={`${superHero.thumbnail.path}/landscape_xlarge.${superHero.thumbnail.extension}`}
                 alt={`Super: ${superHero.name}`}
-                onClick={() => {addDetails(superHero)}}
+                
             />
+
             </Link>
             <h2 className="card-name">{superHero.name}</h2>
             <img onClick={() => {addFavorite(hero)}} className="fav-icon" src="./static/unfavorite.png"></img>
