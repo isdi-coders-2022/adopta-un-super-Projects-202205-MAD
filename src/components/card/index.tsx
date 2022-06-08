@@ -18,6 +18,7 @@ export function Card({ superHero }: { superHero: CharacterModel }) {
     // eslint-disable-next-line prefer-const
     let template = (
         <>
+
             <Link to={`details/${superHero.id}`}>
                 <img
                     className="card-image"
@@ -25,6 +26,7 @@ export function Card({ superHero }: { superHero: CharacterModel }) {
                     alt={`Super: ${superHero.name}`}
                     // onClick={() => {addDetails(superHero)}}
                 />
+
             </Link>
             <h2 className="card-name">{superHero.name}</h2>
             <img onClick={() => {addFavorite(hero)}} className="fav-icon" src="./static/unfavorite.png"></img>
