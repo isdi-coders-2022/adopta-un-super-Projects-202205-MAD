@@ -16,6 +16,8 @@ export function MarvelContextProvider({
     const initPagination: number = 0;
     const initCharacters: number = 0;
     const initFavorites: CharacterModel[] = [];
+    const initDetails: CharacterModel = new CharacterModel('sd', 'sd', 'we', 1);
+
 
     const [homePageCharacters, dispatch] = useReducer(
         homePageCharactersReducer,
@@ -26,6 +28,9 @@ export function MarvelContextProvider({
 
     const [totalCharactersApi, setTotalCharactersApi] =
         useState(initCharacters);
+
+           // for the deatils page  
+    const [details, setDetails] = useState(initDetails); 
 
     const store = new HttpStoreCharacters();
     const [favoriteCharacters, dispatchFavorites] = useReducer(
@@ -70,13 +75,19 @@ export function MarvelContextProvider({
         // dispatchFavorites(actions.addCharacterAction(character));
     }
 
+    function addDetails(character: CharacterModel){
+        setDetails(character)
+    }
+
     const context = {
         homePageCharacters,
         pagination,
         pages,
         totalCharactersApi,
         favoriteCharacters,
-        addFavorite
+        addFavorite,
+        details,
+        addDetails
     };
 
     return (
