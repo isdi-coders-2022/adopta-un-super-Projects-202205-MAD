@@ -3,6 +3,7 @@ import { CharacterModel } from '../../models/characters';
 import { Card } from '../card';
 
 export function CardList({
+    
     characters,
 }: {
     characters: Array<CharacterModel>;

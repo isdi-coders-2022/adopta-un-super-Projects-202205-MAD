@@ -1,20 +1,26 @@
 // import { useAuth0 } from '@auth0/auth0-react';
 import { CharacterModel } from '../models/characters';
+import { iFavorites } from '../models/favorites';
+
 
 export class HttpStoreCharacters {
     url: string;
     constructor() {
-        this.url = 'http://localhost:4000/users?nickname=';
+        this.url = 'http://localhost:4000/users';
     }
+
+    
 
     getCharacters(nickname: string): Promise<any> {
         // GET
-        console.log(this.url + nickname);
+        console.log('http://localhost:4000/users?nickname='+ nickname);
 
         return fetch(this.url + nickname).then((resp) => {
             return resp.json();
         });
     }
+
+    
 
     async getCharacter(character: CharacterModel): Promise<CharacterModel> {
         // GET
@@ -22,7 +28,7 @@ export class HttpStoreCharacters {
         return await resp.json();
     }
 
-    setCharacter(character: CharacterModel): Promise<CharacterModel> {
+    setCharacter(character: iFavorites): Promise<iFavorites> {
         // POST
         return fetch(this.url, {
             method: 'POST',

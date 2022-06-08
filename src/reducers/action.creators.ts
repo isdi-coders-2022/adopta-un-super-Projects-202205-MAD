@@ -1,4 +1,5 @@
 import { CharacterModel } from '../models/characters';
+import { iFavorites } from '../models/favorites';
 import { actionTypes } from './action.types';
 
 export interface iAction {
@@ -11,7 +12,7 @@ export const loadCharactersAction = (characters: any): iAction => ({
     payload: characters,
 });
 
-export const addCharacterAction = (character: CharacterModel): iAction => ({
+export const addCharacterAction = (character: iFavorites): iAction => ({
     type: actionTypes['characters@add'],
     payload: character,
 });

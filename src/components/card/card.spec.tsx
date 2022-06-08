@@ -3,6 +3,7 @@ import {Card} from './index'
 
 describe('Given the Card element', () => {
     const mockCard = {
+        userName: 'Fer',
         id: 1234,
         name: "Batman",
         thumbnail:{
