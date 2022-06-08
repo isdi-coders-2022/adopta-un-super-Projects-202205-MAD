@@ -9,7 +9,9 @@ import { HomePage } from './pages/homePage';
 import { FavPage } from './pages/favPage';
 import { aMenuItems } from './interfaces/menu.items';
 import Layout from './App/layout';
-import { DetailsPage } from './pages/details';
+
+import { DetailsPage } from './pages/detailsPage';
+
 // import AppUI from "./AppUI"
 
 function App() {
