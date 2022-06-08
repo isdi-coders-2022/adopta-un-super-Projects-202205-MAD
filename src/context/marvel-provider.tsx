@@ -94,5 +94,10 @@ export function MarvelContextProvider({
             {children}
         </MarvelContext.Provider>
     );
+    
+
+
+
+    
 }
 }
