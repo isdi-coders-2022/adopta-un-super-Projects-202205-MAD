@@ -1,3 +1,5 @@
+import { User } from "@auth0/auth0-react";
+
 export class CharacterModel {
     name: string;
     thumbnail: {
@@ -9,7 +11,8 @@ export class CharacterModel {
         name: string,
         path: string = '',
         extension: string = '',
-        public id: number
+        public id: number,
+        public userName: string = ''
     ) {
         this.name = name;
         this.thumbnail = {

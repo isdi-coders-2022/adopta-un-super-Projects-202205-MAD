@@ -7,6 +7,8 @@ import { MarvelContext } from './marvel-context';
 import { HttpStoreCharacters } from '../services/http.store.characters';
 import { favoritesCharactersReducer } from '../reducers/reducer-store';
 import { useAuth0 } from '@auth0/auth0-react';
+import { iFavorites } from '../models/favorites';
+
 
 export function MarvelContextProvider({
     children,
@@ -67,7 +69,9 @@ export function MarvelContextProvider({
         setTotalCharactersApi(total);
     }
 
-    function addFavorite(character: CharacterModel) {
+    function addFavorite(character: iFavorites) {
+        console.log(character, "SERVICIO");
+        
         store.setCharacter(character).then((resp) => {
             dispatchFavorites(actions.addCharacterAction(resp));
         });
@@ -81,6 +85,7 @@ export function MarvelContextProvider({
         favoriteCharacters,
         addFavorite,
         getFavorites,
+        user
     };
 
     return (
