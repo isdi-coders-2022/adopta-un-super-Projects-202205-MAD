@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { CardList } from '../components/cardList';
+import LoginButton from '../components/login/login';
 import { MarvelContext } from '../context/marvel-context';
 
 export function HomePage() {
@@ -8,7 +9,7 @@ export function HomePage() {
 
     return (
         <>
-            <CardList characters={homePageCharacters}></CardList>
+         <CardList characters={homePageCharacters}></CardList>
 
             {pagination === 0 ? (
                 ''
