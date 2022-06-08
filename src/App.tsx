@@ -11,12 +11,14 @@ import { aMenuItems } from './interfaces/menu.items';
 import Layout from './App/layout';
 
 import {  DetailsPage } from './pages/detailsPage';
+import { LoginPage } from './pages/loginPage';
 
 // import AppUI from "./AppUI"
 
 function App() {
     const options: aMenuItems = [
-        { path: '', label: 'Home - AUS', page: <HomePage /> },
+        { path: '', label: 'Login', page: <LoginPage /> },
+        { path: 'home', label: 'Home - AUS', page: <HomePage /> },
         { path: 'favorites', label: 'Favorites', page: <FavPage /> },
         { path: 'details/:id', label: 'Details', page: <DetailsPage  /> },
         { path: '*', label: '', page: <Navigate replace to="" /> },
