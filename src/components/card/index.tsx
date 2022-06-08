@@ -13,19 +13,19 @@ export function Card({ superHero }: { superHero: CharacterModel }) {
       extension: "jpg"} 
     }
 
-    const { addFavorite, addDetails } =
+    const { addFavorite } =
     useContext(MarvelContext);
     // eslint-disable-next-line prefer-const
     let template = (
         <>
-            <Link to='details'>
 
-            <img
-                className="card-image"
-                src={`${superHero.thumbnail.path}/landscape_xlarge.${superHero.thumbnail.extension}`}
-                alt={`Super: ${superHero.name}`}
-                
-            />
+            <Link to={`details/${superHero.id}`}>
+                <img
+                    className="card-image"
+                    src={`${superHero.thumbnail.path}/landscape_xlarge.${superHero.thumbnail.extension}`}
+                    alt={`Super: ${superHero.name}`}
+                    // onClick={() => {addDetails(superHero)}}
+                />
 
             </Link>
             <h2 className="card-name">{superHero.name}</h2>
