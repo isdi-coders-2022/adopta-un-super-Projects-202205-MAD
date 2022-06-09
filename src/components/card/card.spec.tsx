@@ -25,6 +25,7 @@ describe('Given the Card element', () => {
         favoriteCharacters: [],
         addFavorite: mockAddFavorite,
         getFavorites: () => {},
+        deleteFavorite: ()=>{},
         user: {},
     };
 
