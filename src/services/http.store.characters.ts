@@ -47,7 +47,7 @@ export class HttpStoreCharacters {
         }).then((response) => response.json());
     }
 
-    deleteCharacter(id: string): Promise<number> {
+    deleteCharacter(id: number | undefined): Promise<number> {
         // DELETE
         return fetch(this.url + `/${id}`, {
             method: 'DELETE',

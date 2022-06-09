@@ -9,4 +9,5 @@ export interface iFavorites {
     };
     img?: string;
     ext?: string;
+    favorite?: boolean;
 }
