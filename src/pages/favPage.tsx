@@ -6,5 +6,12 @@ import { MarvelContext } from '../context/marvel-context';
 export function FavPage() {
     const { favoriteCharacters } = useContext(MarvelContext);
 
-    return <>{<CardList characters={favoriteCharacters}></CardList>}</>;
+    return (
+        <>
+            {<CardList characters={favoriteCharacters}></CardList>}
+
+            
+        </>
+    )
+    
 }
