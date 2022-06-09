@@ -1,34 +1,5 @@
 {
   "favorites": [
-    {
-      "thumbnail": {
-        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
-        "extension": "jpg"
-      },
-      "idCharacter": 1017100,
-      "name": "A-Bomb (HAS)",
-      "nickname": "pablodacun",
-      "id": 1
-    },
-    {
-      "thumbnail": {
-        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/50/4ce18691cbf04",
-        "extension": "jpg"
-      },
-      "idCharacter": 1009146,
-      "name": "Abomination (Emil Blonsky)",
-      "nickname": "pablodacun",
-      "id": 2
-    },
-    {
-      "thumbnail": {
-        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/30/535feab462a64",
-        "extension": "jpg"
-      },
-      "idCharacter": 1009149,
-      "name": "Abyss",
-      "nickname": "pablodacun",
-      "id": 3
-    }
+    
   ]
 }
