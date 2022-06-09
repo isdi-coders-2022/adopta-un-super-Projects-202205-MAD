@@ -54,13 +54,8 @@ export function MarvelContextProvider({
     }, []);
 
     useEffect(() => {
-
         if (isAuthenticated) {
-            console.log('LOGIN');
-
             store.getCharacters(user?.nickname as string).then((resp) => {
-                console.log('RESP', resp);
-
                 dispatchFavorites(actions.loadCharactersAction(resp));
             });
         }

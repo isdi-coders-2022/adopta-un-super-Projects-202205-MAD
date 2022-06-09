@@ -1,17 +1,10 @@
-import { useAuth0 } from '@auth0/auth0-react';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { CardList } from '../components/cardList';
 import { MarvelContext } from '../context/marvel-context';
 
 export function HomePage() {
-    const {
-        pagination,
-        pages,
-        totalCharactersApi,
-        homePageCharacters,
-        getFavorites,
-    } = useContext(MarvelContext);
-    const { isAuthenticated, user } = useAuth0();
+    const { pagination, pages, totalCharactersApi, homePageCharacters } =
+        useContext(MarvelContext);
 
     return (
         <>
