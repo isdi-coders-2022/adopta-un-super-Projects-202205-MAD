@@ -1,6 +1,11 @@
+ul {
+    list-style: none; 
+}
+
 .card-list {
     display: flex;
     flex-wrap: wrap;
+    list-style: none;
 }
 
 .card-list__card {
@@ -9,4 +14,9 @@
 
 .fav-icon {
     width: 2rem;
+}
+
+.logo{
+    width: 100px;
+    height: 50px;
 }
