@@ -13,14 +13,25 @@
     },
     {
       "thumbnail": {
-        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/a0/4ce18a834b7f5",
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
         "extension": "jpg"
       },
-      "idCharacter": 1011198,
-      "name": "Agents of Atlas",
+      "idCharacter": 1017100,
+      "name": "A-Bomb (HAS)",
       "nickname": "pablodacun",
       "favorite": true,
       "id": 2
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec",
+        "extension": "jpg"
+      },
+      "idCharacter": 1009144,
+      "name": "A.I.M.",
+      "nickname": "pablodacun",
+      "favorite": true,
+      "id": 3
     }
   ]
 }
