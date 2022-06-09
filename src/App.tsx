@@ -17,11 +17,11 @@ import { LoginPage } from './pages/loginPage';
 
 function App() {
     const options: aMenuItems = [
-        { path: '', label: 'Login', page: <LoginPage /> },
-        { path: 'home', label: 'Home - AUS', page: <HomePage /> },
-        { path: 'favorites', label: 'Favorites', page: <FavPage /> },
-        { path: 'details/:id', label: 'Details', page: <DetailsPage  /> },
-        { path: '*', label: '', page: <Navigate replace to="" /> },
+        { path: '', label: <img src="./static/objetivo.png" alt="" />, page: <LoginPage /> },
+        { path: 'home', label: <img src="./static/hogar.png" alt="" />, page: <HomePage /> },
+        { path: 'favorites', label: <img src="./static/estrella.png" alt="" />, page: <FavPage /> },
+        { path: 'details/:id', label: <img src="./static/lupa.png" alt="" />, page: <DetailsPage  /> },
+        { path: '*', label: <></>, page: <Navigate replace to="" /> },
     ];
 
     return (
