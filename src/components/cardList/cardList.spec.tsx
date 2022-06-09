@@ -35,6 +35,7 @@ describe('Given the CardList element', () => {
         favoriteCharacters: [],
         addFavorite: () => {},
         getFavorites: () => {},
+        deleteFavorite: () => {},
         user: {},
     };
 
