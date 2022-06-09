@@ -37,13 +37,16 @@ export function MarvelContextProvider({
         favoritesCharactersReducer,
         initFavorites
     );
-    const [favorites, setFavorites] = useState(initialState)
-   
+    const [favorites, setFavorites] = useState(initialState);
 
     useEffect(() => {
         MarvelApi.getCharacters(pagination.toString()).then((resp) => {
-            const filtered = (resp.data.results).filter(character => character.thumbnail?.path !== 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available')
-            
+            const filtered = resp.data.results.filter(
+                (character) =>
+                    character.thumbnail?.path !==
+                    'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available'
+            );
+
             dispatch(actions.loadCharactersAction(filtered));
             // totalCharactersApiUpdate(resp.data.total);
         });
@@ -84,9 +87,15 @@ export function MarvelContextProvider({
     }
     function deleteFavorite(id: iFavorites['id']) {
         store.deleteCharacter(id).then(() => {
-            dispatchFavorites(actions.deleteCharacterAction(favoriteCharacters.find((character) => character.id === id) as iFavorites))
+            dispatchFavorites(
+                actions.deleteCharacterAction(
+                    favoriteCharacters.find(
+                        (character) => character.id === id
+                    ) as iFavorites
+                )
+            );
         });
-    };
+    }
 
     const context = {
         homePageCharacters,
