@@ -12,6 +12,7 @@ const initialContext: {
     favoriteCharacters: iFavorites[];
     addFavorite: (character: iFavorites) => void;
     getFavorites: (nickname: string) => any;
+    deleteFavorite: (id: number | undefined) => void;
     user: User | undefined
 } = {
     homePageCharacters: [],
@@ -21,6 +22,7 @@ const initialContext: {
     favoriteCharacters: [],
     addFavorite: () => {},
     getFavorites: () => {},
+    deleteFavorite: () => {},
     user: {} 
 
 };

@@ -11,7 +11,9 @@ export function Card({ superHero }: { superHero: iFavorites }) {
 
     const idCharacter = id;
 
-    const { addFavorite } = useContext(MarvelContext);
+    const idString: number | undefined = id;
+
+    const { addFavorite, deleteFavorite } = useContext(MarvelContext);
 
     const name2 = user?.nickname as string;
 
@@ -27,22 +29,32 @@ export function Card({ superHero }: { superHero: iFavorites }) {
                 />
             </Link>
             <h2 className="card-name">{superHero.name}</h2>
-            <img
-                onClick={() => {
-                    addFavorite({
-                        thumbnail: {
-                            path: img as string,
-                            extension: ext as string,
-                        },
-                        idCharacter,
-                        name,
-                        nickname: name2,
-                    });
-                }}
-                className="fav-icon"
-                src="./static/unfavorite.png"
-                alt="icon"
-            ></img>
+            {superHero.favorite ? (
+                <img
+                    onClick={() => {
+                        deleteFavorite(idString);
+                    }}
+                    className="fav-icon"
+                    src="./static/favorite.png"
+                ></img>
+            ) : (
+                <img
+                    onClick={() => {
+                        addFavorite({
+                            thumbnail: {
+                                path: img as string,
+                                extension: ext as string,
+                            },
+                            idCharacter,
+                            name,
+                            nickname: name2,
+                            favorite: true,
+                        });
+                    }}
+                    className="fav-icon"
+                    src="./static/unfavorite.png"
+                ></img>
+            )}
         </>
     );
 
