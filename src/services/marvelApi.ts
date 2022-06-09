@@ -1,4 +1,4 @@
-import { CharacterModel } from '../models/characters';
+import { iFavorites } from '../models/favorites';
 
 const url = 'http://gateway.marvel.com/v1/public/characters?limit=20';
 const hash =
@@ -7,7 +7,7 @@ const hash =
 export class MarvelApi {
     static async getCharacters(
         offset: string = '0'
-    ): Promise<{ data: { total: number; results: CharacterModel[] } }> {
+    ): Promise<{ data: { total: number; results: iFavorites[] } }> {
         const result = await fetch(`${url}&offset=${offset}${hash}`);
         return await result.json();
     }

@@ -3,11 +3,11 @@ import { userInfo } from 'os';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { MarvelContext } from '../../context/marvel-context';
-import { CharacterModel } from '../../models/characters';
+import { iFavorites } from '../../models/favorites';
 
-export function Card({ superHero }: { superHero: CharacterModel }) {
+export function Card({ superHero }: { superHero: iFavorites }) {
     const { user } = useContext(MarvelContext);
-    const { id, name, thumbnail } = superHero;
+    const { id, name} = superHero;
     const img = superHero.thumbnail?.path;
     const ext = superHero.thumbnail?.extension;
     console.log(img, ext, 'IMAGEN URL');
@@ -42,8 +42,10 @@ export function Card({ superHero }: { superHero: CharacterModel }) {
             <img
                 onClick={() => {
                     addFavorite({
-                        img,
-                        ext,
+                        thumbnail:{
+                            path:img as string,
+                            extension: ext as string
+                        },
                         idCharacter,
                         name,
                         nickname: name2,

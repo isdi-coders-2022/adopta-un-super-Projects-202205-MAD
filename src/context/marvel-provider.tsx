@@ -1,5 +1,4 @@
 import { ReactElement, useEffect, useReducer, useState } from 'react';
-import { CharacterModel } from '../models/characters';
 import { homePageCharactersReducer } from '../reducers/reducer';
 import * as actions from '../reducers/action.creators';
 import { MarvelApi } from '../services/marvelApi';
@@ -16,10 +15,10 @@ export function MarvelContextProvider({
 }) {
     const { isAuthenticated, user } = useAuth0();
 
-    const initialState: CharacterModel[] = [];
+    const initialState: iFavorites[] = [];
     const initPagination: number = 0;
     const initCharacters: number = 0;
-    const initFavorites: CharacterModel[] = [];
+    const initFavorites: iFavorites[] = [];
 
     const [homePageCharacters, dispatch] = useReducer(
         homePageCharactersReducer,

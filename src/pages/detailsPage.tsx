@@ -1,4 +1,4 @@
-// import { CharacterModel } from "../models/characters";
+// import { iFavorites } from "../models/favorites";
 
 import { useParams } from 'react-router-dom';
 
