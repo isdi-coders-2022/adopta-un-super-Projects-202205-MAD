@@ -19,9 +19,7 @@ function Layout({
     return (
         <>
             <h1>
-                <button>
                 <MarvelButton></MarvelButton>
-                </button>
                 
             </h1>
             <main>{children}</main>
