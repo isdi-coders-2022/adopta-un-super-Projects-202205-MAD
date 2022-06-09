@@ -2,14 +2,25 @@
   "favorites": [
     {
       "thumbnail": {
-        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec",
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
         "extension": "jpg"
       },
-      "idCharacter": 1009144,
-      "name": "A.I.M.",
+      "idCharacter": 1017100,
+      "name": "A-Bomb (HAS)",
       "nickname": "fernando.amazingweb",
       "favorite": true,
       "id": 1
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/60/4c0042121d790",
+        "extension": "jpg"
+      },
+      "idCharacter": 1009150,
+      "name": "Agent Zero",
+      "nickname": "fernando.amazingweb",
+      "favorite": true,
+      "id": 3
     }
   ]
 }

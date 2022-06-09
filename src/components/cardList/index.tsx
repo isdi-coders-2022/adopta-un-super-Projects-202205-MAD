@@ -6,7 +6,7 @@ export function CardList({ characters }: { characters: Array<iFavorites> }) {
     let template = (
         <ul className="card-list">
             {characters.map((item) => (
-                <li key={item.name} className="card-list__card">
+                <li key={item.name } className="card-list__card">
                     <Card superHero={item}></Card>
                 </li>
             ))}

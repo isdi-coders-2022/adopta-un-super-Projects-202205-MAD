@@ -6,6 +6,10 @@ ul {
     list-style: none; 
 }
 
+.hidden{
+    display: none ;
+}
+
 .card-list {
     display: flex;
     flex-wrap: wrap;
@@ -14,10 +18,24 @@ ul {
 
 .card-list__card {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+    position: relative;
+    width: min-content;
+}
+
+.card-list__card h2{
+    margin: 0.5rem auto 2rem auto;
 }
 
 .fav-icon {
-    width: 2rem;
+    width: 3rem;
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    background: transparent;
 }
 
 .logo{

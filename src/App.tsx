@@ -20,7 +20,8 @@ function App() {
         { path: '', label: <img src="./static/objetivo.png" alt="" />, page: <LoginPage /> },
         { path: 'home', label: <img src="./static/hogar.png" alt="" />, page: <HomePage /> },
         { path: 'favorites', label: <img src="./static/estrella.png" alt="" />, page: <FavPage /> },
-        { path: 'details/:id', label: "" , page: <DetailsPage  /> },
+        { path: 'favorites/details/:id', label: "" , page: <DetailsPage  /> },
+        { path: 'home/details/:id', label: "" , page: <DetailsPage  /> },
         { path: '*', label: <></>, page: <Navigate replace to="" /> },
     ];
 
