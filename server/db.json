@@ -1,43 +1,66 @@
 {
   "users": [
     {
-      "id": 1011334,
-      "name": "3-D Man",
-      "userName": "pablodacun"
-    },
-    {
-      "id": 1009148,
-      "name": "Absorbing Man",
-      "userName": "pablodacun"
-    },
-    {
-      "id": 1010903,
-      "name": "Abyss (Age of Apocalypse)",
-      "userName": "pablodacun"
-    },
-    {
-      "id": 1009144,
-      "name": "A.I.M.",
-      "userName": "pablodacun"
-    },
-    {
-      "id": 1017100,
+      "idCharacter": 1017100,
       "name": "A-Bomb (HAS)",
-      "userName": "pablodacun"
+      "nickname": "iavivas3",
+      "id": 1
     },
     {
-      "id": 1017851,
-      "name": "Aero (Aero)",
-      "nickname": "pablodacun"
+      "idCharacter": 1017100,
+      "name": "A-Bomb (HAS)",
+      "nickname": "iavivas3",
+      "id": 2
     },
     {
-      "id": 1012717,
-      "name": "Agatha Harkness",
-      "nickname": "pablodacun"
+      "idCharacter": 1011334,
+      "name": "3-D Man",
+      "nickname": "iavivas3",
+      "id": 3
+    },
+    {
+      "idCharacter": 1010699,
+      "name": "Aaron Stack",
+      "nickname": "iavivas3",
+      "id": 4
+    },
+    {
+      "idCharacter": 1016823,
+      "name": "Abomination (Ultimate)",
+      "nickname": "iavivas3",
+      "id": 5
+    },
+    {
+      "img": "http://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec",
+      "ext": "jpg",
+      "idCharacter": 1009144,
+      "name": "A.I.M.",
+      "nickname": "iavivas3",
+      "id": 6
+    },
+    {
+      "img": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "ext": "jpg",
+      "idCharacter": 1010699,
+      "name": "Aaron Stack",
+      "nickname": "iavivas3",
+      "id": 7
+    },
+    {
+      "img": "http://i.annihil.us/u/prod/marvel/i/mg/5/e0/4c0035c9c425d",
+      "ext": "gif",
+      "idCharacter": 1010846,
+      "name": "Aegis (Trey Rollins)",
+      "nickname": "iavivas3",
+      "id": 8
+    },
+    {
+      "img": "http://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec",
+      "ext": "jpg",
+      "idCharacter": 1009144,
+      "name": "A.I.M.",
+      "nickname": "iavivas3",
+      "id": 9
     }
   ]
-
-
-
-  
 }

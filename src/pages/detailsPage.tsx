@@ -1,13 +1,9 @@
 // import { CharacterModel } from "../models/characters";
 
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
-export function DetailsPage(){
+export function DetailsPage() {
+    const { id } = useParams();
 
-    const {id} = useParams();
-    console.log( id);
-       
-    return (
-        <h1>{id}</h1>
-    )
+    return <h1>{id}</h1>;
 }
