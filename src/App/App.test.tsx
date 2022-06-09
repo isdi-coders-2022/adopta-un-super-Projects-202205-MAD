@@ -1,24 +1,30 @@
 /* eslint-disable no-undef */
 import { render, screen } from '@testing-library/react';
 import App from '../App';
+import { LoginPage } from '../pages/loginPage';
+import { HomePage } from '../pages/homePage';
+import { FavPage } from '../pages/favPage';
+import { DetailsPage } from '../pages/detailsPage';
 
-describe('Given my AppUI', () => {
-    // const mockTitle = {
+jest.mock('../pages/loginPage');
+jest.mock('../pages/homePage');
+jest.mock('../pages/favPage');
+jest.mock('../pages/detailsPage');
 
-    // value: 'Marvel'
-    // }
-
+describe('Given my App', () => {
     describe('When rendering', () => {
-        test('It should display the title', () => {
+        test('It should display the routes', () => {
+            (LoginPage as jest.Mock).mockReturnValue(<div>Login</div>);
+            (HomePage as jest.Mock).mockReturnValue(<div>Home - AUS</div>);
+            (FavPage as jest.Mock).mockReturnValue(<div>Favorites</div>);
+            (DetailsPage as jest.Mock).mockReturnValue(<div>Details</div>);
             render(<App />);
-            const linkElement = screen.getByText(/Marvel/i);
-            expect(linkElement).toBeInTheDocument();
+
+            screen.debug();
+
+            expect(screen.getAllByText('Login')).toBeTruthy();
+            expect(screen.getAllByText('Favorites')).toBeTruthy();
+            expect(screen.getAllByText('Details')).toBeTruthy();
         });
     });
 });
-
-// test('renders learn react link', () => {
-//   render(<AppUI />);
-//   const linkElement = screen.getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });

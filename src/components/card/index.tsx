@@ -36,6 +36,7 @@ export function Card({ superHero }: { superHero: iFavorites }) {
                     }}
                     className="fav-icon"
                     src="./static/favorite.png"
+                    alt="icon"
                 ></img>
             ) : (
                 <img
@@ -53,6 +54,7 @@ export function Card({ superHero }: { superHero: iFavorites }) {
                     }}
                     className="fav-icon"
                     src="./static/unfavorite.png"
+                    alt="icon"
                 ></img>
             )}
         </>
