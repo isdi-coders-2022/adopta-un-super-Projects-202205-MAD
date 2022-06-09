@@ -9,7 +9,6 @@ import { favoritesCharactersReducer } from '../reducers/reducer-store';
 import { useAuth0 } from '@auth0/auth0-react';
 import { iFavorites } from '../models/favorites';
 
-
 export function MarvelContextProvider({
     children,
 }: {
@@ -53,10 +52,22 @@ export function MarvelContextProvider({
         });
     }, []);
 
+    useEffect(() => {
+        console.log('caca');
+
+        if (isAuthenticated) {
+            console.log('LOGIN');
+
+            store.getCharacters(user?.nickname as string).then((resp) => {
+                console.log('RESP', resp);
+
+                dispatchFavorites(actions.loadCharactersAction(resp));
+            });
+        }
+    }, [isAuthenticated]);
+
     function getFavorites(nickname: string) {
         store.getCharacters(nickname).then((resp) => {
-            console.log('hola', resp);
-
             dispatchFavorites(actions.loadCharactersAction(resp[0].favorites));
         });
     }
@@ -70,8 +81,6 @@ export function MarvelContextProvider({
     }
 
     function addFavorite(character: iFavorites) {
-        console.log(character, "SERVICIO");
-        
         store.setCharacter(character).then((resp) => {
             dispatchFavorites(actions.addCharacterAction(resp));
         });
@@ -85,7 +94,7 @@ export function MarvelContextProvider({
         favoriteCharacters,
         addFavorite,
         getFavorites,
-        user
+        user,
     };
 
     return (

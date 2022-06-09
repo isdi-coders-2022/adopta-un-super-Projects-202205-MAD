@@ -12,18 +12,6 @@ export function HomePage() {
         getFavorites,
     } = useContext(MarvelContext);
     const { isAuthenticated, user } = useAuth0();
-    
-    useEffect(() => {
-        const favorites = getFavorites(user?.nickname as string);
-        // console.log('caca', favorites);
-        // console.log('user', user);
-        if (user?.nickname === undefined) {
-            console.log("No se puede guardar")
-        } else {
-            console.log("ya podemos guardar")
-        }
-        
-    }, [isAuthenticated]);
 
     return (
         <>

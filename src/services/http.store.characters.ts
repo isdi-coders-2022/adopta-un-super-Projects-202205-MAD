@@ -2,25 +2,21 @@
 import { CharacterModel } from '../models/characters';
 import { iFavorites } from '../models/favorites';
 
-
 export class HttpStoreCharacters {
     url: string;
     constructor() {
         this.url = 'http://localhost:4000/users';
     }
 
-    
-
     getCharacters(nickname: string): Promise<any> {
         // GET
-        console.log('http://localhost:4000/users?nickname='+ nickname);
 
-        return fetch(this.url + nickname).then((resp) => {
-            return resp.json();
-        });
+        return fetch('http://localhost:4000/users?nickname=' + nickname).then(
+            (resp) => {
+                return resp.json();
+            }
+        );
     }
-
-    
 
     async getCharacter(character: CharacterModel): Promise<CharacterModel> {
         // GET
