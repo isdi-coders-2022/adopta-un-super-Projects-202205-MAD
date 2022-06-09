@@ -35,6 +35,7 @@ describe('Given the favPage', () => {
         favoriteCharacters: mockFavList,
         addFavorite: () => {},
         getFavorites: () => {},
+        deleteFavorite: () => {},
         user: {},
     };
 

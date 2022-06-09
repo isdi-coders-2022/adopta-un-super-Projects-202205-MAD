@@ -41,12 +41,17 @@ export function MarvelContextProvider({
 
     useEffect(() => {
         MarvelApi.getCharacters(pagination.toString()).then((resp) => {
+<<<<<<< HEAD
             const filtered = resp.data.results.filter(
                 (character) =>
                     character.thumbnail?.path !==
                     'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available'
             );
 
+=======
+            const filtered = (resp.data.results).filter(character => character.thumbnail?.path !== 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available')
+            
+>>>>>>> main
             dispatch(actions.loadCharactersAction(filtered));
             // totalCharactersApiUpdate(resp.data.total);
         });
