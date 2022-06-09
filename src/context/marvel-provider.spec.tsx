@@ -36,7 +36,6 @@ const mockCharacter = {
 
 describe('Given the context <MarvelContextProvider />', () => {
     describe("When it's used in a component test", () => {
-        // const store = new HttpStoreCharacters();
         beforeEach(() => {
             (useAuth0 as jest.Mock).mockReturnValue({
                 isAuthenticated: true,
@@ -48,7 +47,6 @@ describe('Given the context <MarvelContextProvider />', () => {
                     data: { results: mockResponseData },
                 }
             );
-            // (store.getCharacters('fer') as unknown as jest.Mock).mockResolvedValue(mockResponseData);
 
             HttpStoreCharacters.prototype.getCharacters = jest
                 .fn()
@@ -104,8 +102,6 @@ describe('Given the context <MarvelContextProvider />', () => {
                 </MarvelContextProvider>
             );
 
-            // expect(await screen.findByText('1')).toBeInTheDocument();
-
             const addButton = screen.getByText('add');
 
             expect(HttpStoreCharacters.prototype.setCharacter).not.toBeCalled();
@@ -121,8 +117,6 @@ describe('Given the context <MarvelContextProvider />', () => {
             expect(
                 HttpStoreCharacters.prototype.setCharacter
             ).toHaveBeenCalledTimes(2);
-
-            // expect(await screen.findByText('true')).toBeInTheDocument();
         });
     });
 });
