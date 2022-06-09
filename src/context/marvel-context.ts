@@ -1,15 +1,15 @@
 import { User } from '@auth0/auth0-react';
 import { createContext } from 'react';
-import { CharacterModel } from '../models/characters';
 import { iFavorites } from '../models/favorites';
 
 
+
 const initialContext: {
-    homePageCharacters: CharacterModel[];
+    homePageCharacters: iFavorites[];
     pagination: number;
     totalCharactersApi: number;
     pages: (offset: number) => void;
-    favoriteCharacters: CharacterModel[];
+    favoriteCharacters: iFavorites[];
     addFavorite: (character: iFavorites) => void;
     getFavorites: (nickname: string) => any;
     user: User | undefined

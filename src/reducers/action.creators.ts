@@ -1,4 +1,3 @@
-import { CharacterModel } from '../models/characters';
 import { iFavorites } from '../models/favorites';
 import { actionTypes } from './action.types';
 
@@ -17,12 +16,12 @@ export const addCharacterAction = (character: iFavorites): iAction => ({
     payload: character,
 });
 
-export const updateCharacterAction = (character: CharacterModel): iAction => ({
+export const updateCharacterAction = (character: iFavorites): iAction => ({
     type: actionTypes['characters@update'],
     payload: character,
 });
 
-export const deleteCharacterAction = (character: CharacterModel): iAction => ({
+export const deleteCharacterAction = (character: iFavorites): iAction => ({
     type: actionTypes['characters@delete'],
     payload: character,
 });

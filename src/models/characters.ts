@@ -1,6 +1,6 @@
 import { User } from "@auth0/auth0-react";
 
-export class CharacterModel {
+export class iFavorites {
     name: string;
     thumbnail: {
         path: string;

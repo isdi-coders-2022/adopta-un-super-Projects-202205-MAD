@@ -1,12 +1,12 @@
 /* eslint-disable prefer-const */
-import { CharacterModel } from '../../models/characters';
+import { iFavorites } from '../../models/favorites';
 import { Card } from '../card';
 
 export function CardList({
     
     characters,
 }: {
-    characters: Array<CharacterModel>;
+    characters: Array<iFavorites>;
 }) {
     let template = (
         <ul className="card-list">

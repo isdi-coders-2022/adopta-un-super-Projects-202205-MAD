@@ -1,24 +1,23 @@
 // import { useAuth0 } from '@auth0/auth0-react';
-import { CharacterModel } from '../models/characters';
 import { iFavorites } from '../models/favorites';
 
 export class HttpStoreCharacters {
     url: string;
     constructor() {
-        this.url = 'http://localhost:4000/users';
+        this.url = 'http://localhost:4000/favorites';
     }
 
     getCharacters(nickname: string): Promise<any> {
         // GET
 
-        return fetch('http://localhost:4000/users?nickname=' + nickname).then(
+        return fetch('http://localhost:4000/favorites?nickname=' + nickname).then(
             (resp) => {
                 return resp.json();
             }
         );
     }
 
-    async getCharacter(character: CharacterModel): Promise<CharacterModel> {
+    async getCharacter(character: iFavorites): Promise<iFavorites> {
         // GET
         const resp = await fetch(this.url + `/${character.id}`);
         return await resp.json();
@@ -36,8 +35,8 @@ export class HttpStoreCharacters {
     }
 
     updateCharacter(
-        character: CharacterModel
-    ): Promise<Partial<CharacterModel>> {
+        character: iFavorites
+    ): Promise<Partial<iFavorites>> {
         // PUT / PATCH
         return fetch(this.url + `/${character.id}`, {
             method: 'PATCH',

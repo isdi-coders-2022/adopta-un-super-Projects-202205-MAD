@@ -2,15 +2,15 @@
 // recibe un estado y una accion
 // retorna un NUEVO estado (NO HAY MUTACION)
 
-import { CharacterModel } from '../models/characters';
+import { iFavorites } from '../models/favorites';
 import { iAction } from './action.creators';
 import { actionTypes } from './action.types';
 
 export function homePageCharactersReducer(
-    initialState: Array<CharacterModel>,
+    initialState: Array<iFavorites>,
     action: iAction
 ) {
-    let state: Array<CharacterModel> = [];
+    let state: Array<iFavorites> = [];
     switch (action.type) {
         case actionTypes['characters@load']:
             state = action.payload;

@@ -2,7 +2,7 @@ export interface iFavorites {
     id?: number;
     name: string;
     nickname: string;
-    idCharacter: number;
+    idCharacter?: number;
     thumbnail?: {
         path: string;
         extension: string;
