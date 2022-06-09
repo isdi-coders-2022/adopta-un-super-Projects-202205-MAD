@@ -1,24 +1,3 @@
 {
-  "favorites": [
-    {
-      "thumbnail": {
-        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec",
-        "extension": "jpg"
-      },
-      "idCharacter": 1009144,
-      "name": "A.I.M.",
-      "nickname": "fernando.amazingweb",
-      "id": 1
-    },
-    {
-      "thumbnail": {
-        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
-        "extension": "jpg"
-      },
-      "idCharacter": 1017100,
-      "name": "A-Bomb (HAS)",
-      "nickname": "fernando.amazingweb",
-      "id": 2
-    }
-  ]
+  "favorites": []
 }

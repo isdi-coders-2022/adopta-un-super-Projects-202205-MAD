@@ -37,6 +37,8 @@ export function MarvelContextProvider({
         favoritesCharactersReducer,
         initFavorites
     );
+    const [favorites, setFavorites] = useState(initialState)
+   
 
     useEffect(() => {
         MarvelApi.getCharacters(pagination.toString()).then((resp) => {
@@ -83,6 +85,11 @@ export function MarvelContextProvider({
             dispatchFavorites(actions.addCharacterAction(resp));
         });
     }
+    function deleteFavorite(id: iFavorites['id']) {
+        store.deleteCharacter(id).then(() => {
+            dispatchFavorites(actions.deleteCharacterAction(favoriteCharacters.find((character) => character.id === id) as iFavorites))
+        });
+    };
 
     const context = {
         homePageCharacters,
@@ -92,6 +99,7 @@ export function MarvelContextProvider({
         favoriteCharacters,
         addFavorite,
         getFavorites,
+        deleteFavorite,
         user,
     };
 
