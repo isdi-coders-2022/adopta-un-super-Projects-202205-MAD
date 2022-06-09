@@ -32,6 +32,28 @@
       "nickname": "pablodacun",
       "favorite": true,
       "id": 3
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/a0/4ce18a834b7f5",
+        "extension": "jpg"
+      },
+      "idCharacter": 1011198,
+      "name": "Agents of Atlas",
+      "nickname": "pablodacun",
+      "favorite": true,
+      "id": 4
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/60/4c0042121d790",
+        "extension": "jpg"
+      },
+      "idCharacter": 1009150,
+      "name": "Agent Zero",
+      "nickname": "pablodacun",
+      "favorite": true,
+      "id": 5
     }
   ]
 }
