@@ -5,6 +5,7 @@ import { aMenuItems } from '../interfaces/menu.items';
 import { useAuth0 } from '@auth0/auth0-react';
 import '../styles/App.css';
 import LoginButton from '../components/login/login';
+import MarvelButton from '../components/login/marvel';
 
 function Layout({
     options,
@@ -17,7 +18,12 @@ function Layout({
 
     return (
         <>
-            <h1>Marvel</h1>
+            <h1>
+                <button>
+                <MarvelButton></MarvelButton>
+                </button>
+                
+            </h1>
             <main>{children}</main>
             <Navigation options={options}></Navigation>
 

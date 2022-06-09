@@ -1,3 +1,26 @@
 {
-  "favorites": []
+  "favorites": [
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+        "extension": "jpg"
+      },
+      "idCharacter": 1011334,
+      "name": "3-D Man",
+      "nickname": "pablodacun",
+      "favorite": true,
+      "id": 1
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/a0/4ce18a834b7f5",
+        "extension": "jpg"
+      },
+      "idCharacter": 1011198,
+      "name": "Agents of Atlas",
+      "nickname": "pablodacun",
+      "favorite": true,
+      "id": 2
+    }
+  ]
 }

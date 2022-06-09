@@ -42,7 +42,10 @@ export function MarvelContextProvider({
 
     useEffect(() => {
         MarvelApi.getCharacters(pagination.toString()).then((resp) => {
-            dispatch(actions.loadCharactersAction(resp.data.results));
+            const filtered = (resp.data.results).filter(character => character.thumbnail?.path !== 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available')
+            console.log(filtered, "filter");
+            
+            dispatch(actions.loadCharactersAction(filtered));
             // totalCharactersApiUpdate(resp.data.total);
         });
     }, [pagination]);
