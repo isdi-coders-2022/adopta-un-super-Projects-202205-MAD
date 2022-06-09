@@ -52,7 +52,6 @@ export function MarvelContextProvider({
     }, []);
 
     useEffect(() => {
-        console.log('caca');
 
         if (isAuthenticated) {
             console.log('LOGIN');
@@ -67,7 +66,7 @@ export function MarvelContextProvider({
 
     function getFavorites(nickname: string) {
         store.getCharacters(nickname).then((resp) => {
-            dispatchFavorites(actions.loadCharactersAction(resp[0].favorites));
+            dispatchFavorites(actions.loadCharactersAction(resp.favorites));
         });
     }
 
