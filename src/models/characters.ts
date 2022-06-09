@@ -7,6 +7,8 @@ export class iFavorites {
         extension: string;
     };
 
+    
+
     constructor(
         name: string,
         path: string = '',
