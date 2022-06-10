@@ -2,17 +2,6 @@
   "favorites": [
     {
       "thumbnail": {
-        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
-        "extension": "jpg"
-      },
-      "idCharacter": 1017100,
-      "name": "A-Bomb (HAS)",
-      "nickname": "fernando.amazingweb",
-      "favorite": true,
-      "id": 1
-    },
-    {
-      "thumbnail": {
         "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec",
         "extension": "jpg"
       },
@@ -32,17 +21,6 @@
       "nickname": "fernando.amazingweb",
       "favorite": true,
       "id": 4
-    },
-    {
-      "thumbnail": {
-        "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
-        "extension": "jpg"
-      },
-      "idCharacter": 1011334,
-      "name": "3-D Man",
-      "nickname": "fernando.amazingweb",
-      "favorite": true,
-      "id": 5
     },
     {
       "thumbnail": {
