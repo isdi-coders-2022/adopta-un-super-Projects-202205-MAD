@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { MarvelContext } from '../../context/marvel-context';
 import { Card } from './index';
 
@@ -25,18 +25,18 @@ describe('Given the Card element', () => {
         favoriteCharacters: [],
         addFavorite: mockAddFavorite,
         getFavorites: () => {},
-        deleteFavorite: ()=>{},
+        deleteFavorite: () => {},
         user: {},
         openModal: false,
-        openModalF: ()=>{}
+        openModalF: () => {},
     };
 
     test('should be rendered', () => {
         render(
             <MarvelContext.Provider value={mockContextValue}>
-                <BrowserRouter>
+                <MemoryRouter>
                     <Card superHero={mockCard} />
-                </BrowserRouter>
+                </MemoryRouter>
             </MarvelContext.Provider>
         );
 
@@ -47,9 +47,9 @@ describe('Given the Card element', () => {
         test('Then it should call the function', () => {
             render(
                 <MarvelContext.Provider value={mockContextValue}>
-                    <BrowserRouter>
+                    <MemoryRouter>
                         <Card superHero={mockCard} />
-                    </BrowserRouter>
+                    </MemoryRouter>
                 </MarvelContext.Provider>
             );
 

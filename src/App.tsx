@@ -10,17 +10,29 @@ import { FavPage } from './pages/favPage';
 import { aMenuItems } from './interfaces/menu.items';
 import Layout from './App/layout';
 
-import {  DetailsPage } from './pages/detailsPage';
+import { DetailsPage } from './pages/detailsPage';
 import { LoginPage } from './pages/loginPage';
 
 // import AppUI from "./AppUI"
 
 function App() {
     const options: aMenuItems = [
-        { path: '', label: <img src="./static/objetivo.png" alt="" />, page: <LoginPage /> },
-        { path: 'home', label: <img src="./static/hogar.png" alt="" />, page: <HomePage /> },
-        { path: 'favorites', label: <img src="./static/estrella.png" alt="" />, page: <FavPage /> },
-        { path: 'details/:id', label: "" , page: <DetailsPage  /> },
+        {
+            path: '',
+            label: <img src="./static/objetivo.png" alt="login" />,
+            page: <LoginPage />,
+        },
+        {
+            path: 'home',
+            label: <img src="./static/hogar.png" alt="hogar" />,
+            page: <HomePage />,
+        },
+        {
+            path: 'favorites',
+            label: <img src="./static/estrella.png" alt="favorites" />,
+            page: <FavPage />,
+        },
+        { path: 'details/:id', label: '', page: <DetailsPage /> },
         { path: '*', label: <></>, page: <Navigate replace to="" /> },
     ];
 
