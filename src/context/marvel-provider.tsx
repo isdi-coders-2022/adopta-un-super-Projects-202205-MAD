@@ -24,6 +24,7 @@ export function MarvelContextProvider({
     const [openModal, setOpenModal] = useState(initModal);
 
     const openModalF = () => {
+        console.log(openModal);
         setOpenModal(!openModal);
     }
 

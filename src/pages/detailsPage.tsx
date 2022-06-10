@@ -20,12 +20,9 @@ export function DetailsPage() {
 
     const modal = document.querySelector('#modal');
 
-    useEffect(() => {
-        openModalF()
-    }, [openModal])
-
     return (
             <><h1>{hero[0].name}</h1><div className="details">
+                <h2>textosss</h2>
 
             <img
                 className="card-image"
@@ -67,31 +64,29 @@ export function DetailsPage() {
                 ></img>
             )}
 
-            {!openModal && (
-                <div id="modal" className="hidden ">
-                <h2>Give a new name to your Hero</h2>
+                { openModal && (
+                    <div id="modal" className=" ">
+                    <h2>Give a new name to your Hero</h2>
 
-                <input type="text" placeholder={hero[0].name} />
+                    <input type="text" placeholder={hero[0].name} />
 
-                {/* <p>{todoForDelete}</p> */}
-                <div className="in-line-buttons">
-                <button className="button"
-                    onClick={() => alert('yes')}
-                >
-                    Yes
-                </button>
-                <button className="button"
-                    onClick={() => {
-                        () => alert('no')
-                    }}
-                >
-                    Cancel
-                </button>
+                    <div className="in-line-buttons">
+                        <button className="button"
+                            onClick={() => alert('yes')}
+                        >
+                            Yes
+                        </button>
+                        <button className="button"
+                            onClick={openModalF}
+                        >
+                            Cancel
+                        </button>
+                    </div>
                 </div>
-    </div>
-            )
+                )
 
-            }
+                }
+           
         </div></>
     )
 }

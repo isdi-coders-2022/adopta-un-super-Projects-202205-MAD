@@ -4,7 +4,7 @@ import { CardList } from '../components/cardList';
 import { MarvelContext } from '../context/marvel-context';
 
 export function FavPage() {
-    const { favoriteCharacters } = useContext(MarvelContext);
+    const { favoriteCharacters, openModal, openModalF } = useContext(MarvelContext);
 
     return (
         <>

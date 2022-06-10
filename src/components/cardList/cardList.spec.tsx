@@ -37,6 +37,8 @@ describe('Given the CardList element', () => {
         getFavorites: () => {},
         deleteFavorite: () => {},
         user: {},
+        openModal: false,
+        openModalF: ()=>{}
     };
 
     test('should be rendered', () => {

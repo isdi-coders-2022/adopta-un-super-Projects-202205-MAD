@@ -102,8 +102,7 @@ justify-content: space-around;
     display: none ;
 }
 
-  .show{
-      display: block;
+  #modal{
     position: fixed;
     top: -10px;
     left: -10px;
