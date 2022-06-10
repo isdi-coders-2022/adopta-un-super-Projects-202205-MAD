@@ -74,7 +74,7 @@ export function DetailsPage() {
                         <button className="button"
                             onClick={() => alert('yes')}
                         >
-                            Yes
+                            Save
                         </button>
                         <button className="button"
                             onClick={openModalF}

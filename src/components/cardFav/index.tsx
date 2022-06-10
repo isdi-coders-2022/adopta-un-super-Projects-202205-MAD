@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { MarvelContext } from '../../context/marvel-context';
 import { iFavorites } from '../../models/favorites';
 
-export function Card({ superHero }: { superHero: iFavorites }) {
+export function CardFav({ superHero }: { superHero: iFavorites }) {
     const { user } = useContext(MarvelContext);
     const { id, name } = superHero;
     const img = superHero.thumbnail?.path;
@@ -38,12 +38,12 @@ export function Card({ superHero }: { superHero: iFavorites }) {
                     src="./static/favorite.png"
                     alt="icon"
                 ></img>
-                {/* <img
+                <img
                     onClick={openModalF}
                     className="fav-icon update"
                     src="./static/update.png"
                     alt="icon"
-                ></img> */}
+                ></img>
                 </>
             ) : (
                 <img
