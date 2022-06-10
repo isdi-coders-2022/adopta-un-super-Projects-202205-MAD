@@ -19,6 +19,13 @@ export function MarvelContextProvider({
     const initPagination: number = 0;
     const initCharacters: number = 0;
     const initFavorites: iFavorites[] = [];
+    const initModal: boolean = false;
+
+    const [openModal, setOpenModal] = useState(initModal);
+
+    const openModalF = () => {
+        setOpenModal(!openModal);
+    }
 
     const [homePageCharacters, dispatch] = useReducer(
         homePageCharactersReducer,
@@ -107,6 +114,8 @@ export function MarvelContextProvider({
         getFavorites,
         deleteFavorite,
         user,
+        openModal,
+        openModalF
     };
 
     return (

@@ -13,7 +13,9 @@ const initialContext: {
     addFavorite: (character: iFavorites) => void;
     getFavorites: (nickname: string) => any;
     deleteFavorite: (id: number | undefined) => void;
-    user: User | undefined
+    user: User | undefined,
+    openModal: boolean,
+    openModalF: () => void;
 } = {
     homePageCharacters: [],
     pagination: 0,
@@ -23,7 +25,9 @@ const initialContext: {
     addFavorite: () => {},
     getFavorites: () => {},
     deleteFavorite: () => {},
-    user: {} 
+    user: {} ,
+    openModal: false,
+    openModalF: () => {}
 
 };
 
