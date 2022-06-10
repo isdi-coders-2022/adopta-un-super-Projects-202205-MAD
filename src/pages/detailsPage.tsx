@@ -72,9 +72,9 @@ export function DetailsPage() {
 
                     <div className="in-line-buttons">
                         <button className="button"
-                            onClick={() => alert('yes')}
+                            
                         >
-                            Yes
+                            Save
                         </button>
                         <button className="button"
                             onClick={openModalF}

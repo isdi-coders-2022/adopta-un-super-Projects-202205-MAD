@@ -135,11 +135,23 @@ justify-content: space-around;
     display: flex;
     gap: 2rem;
   }
+
+  #modal h2{
+      color: black;
+  }
+
+  #modal input{
+      margin: 2rem auto 2rem auto;
+  }
+
+  #modal button{
+      padding: 0.8rem 1rem;
+  }
   
   #modal p{
     margin-bottom: 3rem;
     width: 25rem;
-    background-color: white;
+    background-color: black;
     border-radius: 0.8rem;
     padding: 1rem 2rem;
     box-shadow: 2px 2px 6px #00000060;
