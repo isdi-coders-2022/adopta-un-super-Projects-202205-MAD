@@ -14,17 +14,17 @@ jest.mock('../pages/detailsPage');
 describe('Given my App', () => {
     describe('When rendering', () => {
         test('It should display the routes', () => {
-            (LoginPage as jest.Mock).mockReturnValue(<div>Login</div>);
-            (HomePage as jest.Mock).mockReturnValue(<div>Home - AUS</div>);
-            (FavPage as jest.Mock).mockReturnValue(<div>Favorites</div>);
-            (DetailsPage as jest.Mock).mockReturnValue(<div>Details</div>);
+            (LoginPage as jest.Mock).mockReturnValue(<img alt="login" />);
+            (HomePage as jest.Mock).mockReturnValue(<img alt="home" />);
+            (FavPage as jest.Mock).mockReturnValue(<img alt="favorites" />);
+            (DetailsPage as jest.Mock).mockReturnValue(<img alt="details" />);
             render(<App />);
 
             screen.debug();
 
-            expect(screen.getAllByText('Login')).toBeTruthy();
-            expect(screen.getAllByText('Favorites')).toBeTruthy();
-            expect(screen.getAllByText('Details')).toBeTruthy();
+            expect(screen.getByAltText('logo')).toBeTruthy();
+            expect(screen.getByAltText('favorites')).toBeTruthy();
+            expect(screen.getByAltText('hogar')).toBeTruthy();
         });
     });
 });
