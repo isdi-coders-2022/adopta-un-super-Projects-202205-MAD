@@ -37,6 +37,8 @@ describe('Given the favPage', () => {
         getFavorites: () => {},
         deleteFavorite: () => {},
         user: {},
+        openModal: false,
+        openModalF: ()=>{}
     };
 
     test('should be rendered', () => {

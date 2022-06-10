@@ -27,6 +27,8 @@ describe('Given the Card element', () => {
         getFavorites: () => {},
         deleteFavorite: ()=>{},
         user: {},
+        openModal: false,
+        openModalF: ()=>{}
     };
 
     test('should be rendered', () => {

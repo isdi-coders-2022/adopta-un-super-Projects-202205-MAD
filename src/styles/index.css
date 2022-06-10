@@ -6,6 +6,8 @@ ul {
     list-style: none; 
 }
 
+
+
 .card-list {
     display: flex;
     flex-wrap: wrap;
@@ -14,10 +16,35 @@ ul {
 
 .card-list__card {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+    position: relative;
+    width: min-content;
+    padding: 1rem;
+}
+
+.card-list__card h2{
+    margin: 0.5rem auto 2rem auto;
+}
+
+.details{
+    position: relative;
+    width: min-content;
 }
 
 .fav-icon {
-    width: 2rem;
+    width: 3rem;
+    position: absolute;
+    top: 7%;
+    right: 7%;
+    background: transparent;
+    cursor: pointer;
+}
+.update{
+    top: 7%;
+    right: 28%;
 }
 
 .logo{
@@ -71,4 +98,39 @@ justify-content: space-around;
     width: 23rem;
   }
 
+  .hidden{
+    display: none ;
+}
 
+  #modal{
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: rgba(32, 35, 41, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+  }
+  
+  .in-line-buttons{
+    display: flex;
+    gap: 2rem;
+  }
+  
+  #modal p{
+    margin-bottom: 3rem;
+    width: 25rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    padding: 1rem 2rem;
+    box-shadow: 2px 2px 6px #00000060;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    font-size: 1.1rem;
+    white-space: pre-line;
+    color: black;
+  }

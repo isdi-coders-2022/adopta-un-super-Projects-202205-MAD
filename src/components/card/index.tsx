@@ -13,14 +13,14 @@ export function Card({ superHero }: { superHero: iFavorites }) {
 
     const idString: number | undefined = id;
 
-    const { addFavorite, deleteFavorite } = useContext(MarvelContext);
+    const { addFavorite, deleteFavorite, openModal, openModalF } = useContext(MarvelContext);
 
     const name2 = user?.nickname as string;
 
     // eslint-disable-next-line prefer-const
     let template = (
         <>
-            <Link to={`details/${superHero.id}`}>
+            <Link to={`/details/${superHero.id}`}>
                 <img
                     className="card-image"
                     src={`${img}/landscape_xlarge.${ext}`}
@@ -30,14 +30,20 @@ export function Card({ superHero }: { superHero: iFavorites }) {
             </Link>
             <h2 className="card-name">{superHero.name}</h2>
             {superHero.favorite ? (
-                <img
+                <><img
                     onClick={() => {
                         deleteFavorite(idString);
-                    }}
+                    } }
                     className="fav-icon"
                     src="./static/favorite.png"
                     alt="icon"
                 ></img>
+                <img
+                    onClick={openModalF}
+                    className="fav-icon update"
+                    src="./static/update.png"
+                    alt="icon"
+                ></img></>
             ) : (
                 <img
                     onClick={() => {
