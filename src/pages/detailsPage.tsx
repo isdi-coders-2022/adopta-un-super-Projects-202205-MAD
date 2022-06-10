@@ -21,9 +21,9 @@ export function DetailsPage() {
     const modal = document.querySelector('#modal');
 
     return (
-            <><h1>{hero[0].name}</h1><div className="details">
-                <h2>textosss</h2>
-
+            <>
+            <div className="details">
+                <h1>{hero[0].name}</h1>
             <img
                 className="card-image"
                 src={`${hero[0].thumbnail?.path}/landscape_xlarge.${hero[0].thumbnail?.extension}`}
