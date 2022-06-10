@@ -43,6 +43,76 @@
       "nickname": "fernando.amazingweb",
       "favorite": true,
       "id": 5
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+        "extension": "jpg"
+      },
+      "idCharacter": 1017100,
+      "name": "A-Bomb (HAS)",
+      "favorite": true,
+      "id": 6
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+        "extension": "jpg"
+      },
+      "idCharacter": 1011334,
+      "name": "3-D Man",
+      "favorite": true,
+      "id": 7
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+        "extension": "jpg"
+      },
+      "idCharacter": 1011334,
+      "name": "3-D Man",
+      "favorite": true,
+      "id": 8
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+        "extension": "jpg"
+      },
+      "idCharacter": 1017100,
+      "name": "A-Bomb (HAS)",
+      "favorite": true,
+      "id": 9
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+        "extension": "jpg"
+      },
+      "idCharacter": 1017100,
+      "name": "A-Bomb (HAS)",
+      "favorite": true,
+      "id": 10
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec",
+        "extension": "jpg"
+      },
+      "idCharacter": 1009144,
+      "name": "A.I.M.",
+      "favorite": true,
+      "id": 11
+    },
+    {
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/50/4ce18691cbf04",
+        "extension": "jpg"
+      },
+      "idCharacter": 1009146,
+      "name": "Abomination (Emil Blonsky)",
+      "favorite": true,
+      "id": 12
     }
   ]
 }

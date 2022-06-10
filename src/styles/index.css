@@ -22,6 +22,7 @@ ul {
     text-align: center;
     position: relative;
     width: min-content;
+    padding: 1rem;
 }
 
 .card-list__card h2{
@@ -36,14 +37,14 @@ ul {
 .fav-icon {
     width: 3rem;
     position: absolute;
-    top: 2%;
-    right: 3%;
+    top: 7%;
+    right: 7%;
     background: transparent;
     cursor: pointer;
 }
 .update{
-    top: 2%;
-    right: 24%;
+    top: 7%;
+    right: 28%;
 }
 
 .logo{
