@@ -72,7 +72,7 @@ export function DetailsPage() {
 
                     <div className="in-line-buttons">
                         <button className="button"
-                            onClick={() => alert('yes')}
+                            
                         >
                             Save
                         </button>
